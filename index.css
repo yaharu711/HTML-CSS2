@@ -5,3 +5,180 @@ html {
 body {
     font-size: 1.5rem;
 }
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 36px;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+.header__h1 {
+    margin-left: 100px;
+}
+
+.header__img {
+    height: atuo;
+    width: 150px;
+    object-fit: contain;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 139, 139);
+    height: 50px;
+    width: 100%;
+    /* ちょっとおしゃれになる */
+    box-shadow: 0px 3px 5px rgb(4, 199, 150);
+}
+
+.navigation__ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    width: 100%;
+}
+
+.navigation__li {
+    width: 100%;
+    text-align: center;
+}
+
+.navigation__a {
+    color: rgb(255, 255, 255);
+}
+
+.navigation__a:hover {
+    color: rgb(6, 249, 176);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    /* %にすれば表示領域によって要素も動く。固定したい時もあると思うからケースバイケース */
+    width: 100%;
+}
+
+.main__subcontents__ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__subcontents__li {
+    width: 100%;
+}
+
+.main__subcontents__img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.main__subcontents__a {
+    display: inline-block;
+    color: rgb(65, 105, 225);
+    border-bottom: 2px solid rgb(24, 78, 239); 
+    /* border-bottom-colorはカラーのスタイルを指定できる */
+    transition: border-bottom-color 0.3s;
+}
+
+.main__subcontents__a:hover {
+    opacity: 0.7;
+    /* transparentは色を透明にするスタイル */
+    border-bottom-color: transparent;
+}
+
+.main__contents {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__contents--articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    width: 70%;
+}
+
+.main__contents__articles--created-at {
+    display: inline;
+    margin-right: 8px;
+}
+
+.main__contents__articles--category {
+    display: inline;
+}
+
+.main__contents--aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: navajowhite;
+    width: 30%;
+}
+
+.main__aside--profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main__aside--ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main__aside--archive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer__about {
+    background-color: beige;
+    width: 100%;
+}
+
+.footer__menue {
+    background-color: burlywood;
+    width: 100%;
+}
+
+.footer__twitter {
+    background-color: azure;
+    width: 100%;
+}

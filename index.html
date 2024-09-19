@@ -6,6 +6,125 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__h1">
+                <a href=""><img class="header__img" src="./img/logo.svg" alt="HTML・CSS練習2" /></a>
+            </h1>
+            <nav class="navigation">
+                <ul class="navigation__ul">
+                    <li class="navigation__li">
+                        <a class="navigation__a" href="">NEW</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__a" href="">COLUMN</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__a" href="">SERIES</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__a" href="">Q&A</a>
+                    </li>
+                    <li class="navigation__li">
+                        <a class="navigation__a" href="">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- 全体的に、表示領域が変わっても動的にならず固定になってしまう。。なぜ？？？flexは使っているのだけれど -->
+        <main class="main">
+            <ul class="main__subcontents__ul">
+                <li class="main__subcontents__li">
+                    <img class="main__subcontents__img" src="./img/pickup1.jpg" alt="記事画像">
+                    <h3>記事タイトル</h3>
+                    <a class="main__subcontents__a" href="">READ MORE</a>
+                </li>
+                <li class="main__subcontents__li">
+                    <img class="main__subcontents__img" src="./img/pickup2.jpg" alt="記事画像">
+                    <h3>記事タイトル</h3>
+                    <a class="main__subcontents__a" href="">READ MORE</a>
+                </li>
+                <li class="main__subcontents__li">
+                    <img class="main__subcontents__img" src="./img/pickup3.jpg" alt="記事画像">
+                    <h3>記事タイトル</h3>
+                    <a class="main__subcontents__a" href="">READ MORE</a>
+                </li>
+            </ul>
+            <div class="main__contents">
+                <ul class="main__contents--articles">
+                    <li class="main__contents--article">
+                        <h3>記事タイトル</h3>
+                        <!-- ここは階層が深くなってもdisplayで管理した方が良いかな？？ -->
+                        <p class="main__contents__articles--created-at">2024/09/18</p>
+                        <p class="main__contents__articles--category">カテゴリ1</p>
+                        <img src="" alt="記事画像">
+                        <p>テキスト</p>
+                        <a href="">READ MORE</a>
+                    </li>
+                    <li>
+                        <h3>記事タイトル</h3>
+                        <div>
+                            <p>2024/09/18</p>
+                            <p>カテゴリ1</p>
+                        </div>
+                        <img src="" alt="記事画像">
+                        <p>テキスト</p>
+                        <a href="">READ MORE</a>
+                    </li>
+                    <li>
+                        <h3>記事タイトル</h3>
+                        <div>
+                            <p>2024/09/18</p>
+                            <p>カテゴリ1</p>
+                        </div>
+                        <img src="" alt="記事画像">
+                        <p>テキスト</p>
+                        <a href="">READ MORE</a>
+                    </li>
+                </ul>
+                <div class="main__contents--aside">
+                    <section class="main__aside--profile">
+                        <img src="" alt="プロフィール画像">
+                        <h3>test</h3>
+                        <p>testです。</p>
+                    </section>
+                    <ul class="main__aside--ranking">
+                        <li>
+                            <img src="" alt="ランキング画像">
+                            <a href=""><h3>タタイトルffe</h3></a>
+                        </li>
+                        <li>
+                            <img src="" alt="ランキング画像">
+                            <a href=""><h3>タタイトルffe</h3></a>
+                        </li>
+                    </ul>
+                    <ul class="main__aside--archive">
+                        <li>
+                            <p>2024年9月1日</p>
+                        </li>
+                        <li>
+                            <p>2024年9月1日</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__about">
+                <p>テキスト</p>
+                <p>プロフィール詳細</p>
+                <p>お仕事の依頼</p>
+                <p>お問い合わせ</p>
+            </div>
+            <ul class="footer__menue">
+                <li>
+                    <a href="">NEW</a>
+                </li>
+            </ul>
+            <div class="footer__twitter">
+                <p>twitter</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
