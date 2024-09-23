@@ -33,97 +33,137 @@
         </header>
         <!-- 全体的に、表示領域が変わっても動的にならず固定になってしまう。。なぜ？？？flexは使っているのだけれど -->
         <main class="main">
-            <ul class="main__subcontents__ul">
-                <li class="main__subcontents__li">
-                    <img class="main__subcontents__img" src="./img/pickup1.jpg" alt="記事画像">
+            <div class="pickup">
+                <article>
+                    <img class="pickup__img" src="./img/pickup1.jpg" alt="記事画像">
                     <h3>記事タイトル</h3>
-                    <a class="main__subcontents__a" href="">READ MORE</a>
-                </li>
-                <li class="main__subcontents__li">
-                    <img class="main__subcontents__img" src="./img/pickup2.jpg" alt="記事画像">
+                    <a class="article__a" href="">READ MORE</a>
+                </article>
+                <article>
+                    <img class="pickup__img" src="./img/pickup2.jpg" alt="記事画像">
                     <h3>記事タイトル</h3>
-                    <a class="main__subcontents__a" href="">READ MORE</a>
-                </li>
-                <li class="main__subcontents__li">
-                    <img class="main__subcontents__img" src="./img/pickup3.jpg" alt="記事画像">
+                    <a class="article__a" href="">READ MORE</a>
+                </article>
+                <article>
+                    <img class="pickup__img" src="./img/pickup3.jpg" alt="記事画像">
                     <h3>記事タイトル</h3>
-                    <a class="main__subcontents__a" href="">READ MORE</a>
-                </li>
-            </ul>
+                    <a class="article__a" href="">READ MORE</a>
+                </article>
+            </div>
             <div class="main__contents">
-                <ul class="main__contents--articles">
-                    <li class="main__contents--article">
+                <div class="main_articles">
+                    <article>
                         <h3>記事タイトル</h3>
                         <!-- ここは階層が深くなってもdisplayで管理した方が良いかな？？ -->
                         <p class="main__contents__articles--created-at">2024/09/18</p>
                         <p class="main__contents__articles--category">カテゴリ1</p>
-                        <img src="" alt="記事画像">
-                        <p>テキスト</p>
-                        <a href="">READ MORE</a>
-                    </li>
-                    <li>
-                        <h3>記事タイトル</h3>
-                        <div>
-                            <p>2024/09/18</p>
-                            <p>カテゴリ1</p>
+                        <img class="main__contents__articles--image" src="./img/main1.jpg" alt="記事画像">
+                        <div class="articles__description">
+                            <p>テキストtetetetetetetetetetetetetetetete</p>
+                            <a class="article__a" href="">READ MORE</a>
                         </div>
-                        <img src="" alt="記事画像">
-                        <p>テキスト</p>
-                        <a href="">READ MORE</a>
-                    </li>
-                    <li>
+                    </article>
+                    <article>
                         <h3>記事タイトル</h3>
-                        <div>
-                            <p>2024/09/18</p>
-                            <p>カテゴリ1</p>
+                        <p class="main__contents__articles--created-at">2024/09/18</p>
+                        <p class="main__contents__articles--category">カテゴリ1</p>
+                        <img class="main__contents__articles--image" src="./img/main2.jpg" alt="記事画像">
+                        <div class="articles__description">
+                            <p>テキスト</p>
+                            <a class="article__a" href="">READ MORE</a>
                         </div>
-                        <img src="" alt="記事画像">
-                        <p>テキスト</p>
-                        <a href="">READ MORE</a>
-                    </li>
-                </ul>
+                    </article>
+                    <article>
+                        <h3>記事タイトル</h3>
+                        <p class="main__contents__articles--created-at">2024/09/18</p>
+                        <p class="main__contents__articles--category">カテゴリ1</p>
+                        <img class="main__contents__articles--image" src="./img/main3.jpg" alt="記事画像">
+                        <div class="articles__description">
+                            <p>テキスト</p>
+                            <a class="article__a" href="">READ MORE</a>
+                        </div>
+                    </article>
+                </div>
                 <div class="main__contents--aside">
-                    <section class="main__aside--profile">
-                        <img src="" alt="プロフィール画像">
+                    <section class="profile">
+                        <img  class="profile__img" src="./img/author.jpg" alt="プロフィール画像">
                         <h3>test</h3>
-                        <p>testです。</p>
+                        <p>HTML・CSS練習中です。一旦はこれぐらいのサイトは1日程度で実装できるぐらいを目指しています。その後はアニメーションやデザインに力を入れたいです</p>
                     </section>
-                    <ul class="main__aside--ranking">
-                        <li>
-                            <img src="" alt="ランキング画像">
-                            <a href=""><h3>タタイトルffe</h3></a>
-                        </li>
-                        <li>
-                            <img src="" alt="ランキング画像">
-                            <a href=""><h3>タタイトルffe</h3></a>
-                        </li>
-                    </ul>
-                    <ul class="main__aside--archive">
-                        <li>
-                            <p>2024年9月1日</p>
-                        </li>
-                        <li>
-                            <p>2024年9月1日</p>
-                        </li>
-                    </ul>
+                    <section class="ranking">
+                        <h2>Ranking</h2>
+                        <article>
+                            <a class="article__a" href="">
+                                <img class="ranking__img" src="./img/ranking1.jpg" alt="ランキング画像">
+                                <h3 class="ranking__h3">タタイトルタイトルタイトル</h3>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="article__a" href="">
+                                <img class="ranking__img" src="./img/ranking2.jpg" alt="ランキング画像">
+                                <h3 class="ranking__h3">タタイトルffe</h3>
+                            </a>
+                        </article>
+                        <article>
+                            <a class="article__a" href="">
+                                <img class="ranking__img" src="./img/ranking3.jpg" alt="ランキング画像">
+                                <h3 class="ranking__h3">タタイトルffe</h3>
+                            </a>
+                        </article>
+                    </section>
+                    <section class="archive">
+                        <h2>Archive</h2>
+                        <ul class="archive__ul">
+                            <li class="archive__li">
+                                <!-- text-alignは継承される -->
+                                <a href=""><p>2024年9月30日</p></a>
+                            </li>
+                            <li class="archive__li">
+                                <a href=""><p>2024年9月29日</p></a>
+                            </li>
+                            <li class="archive__li">
+                                <a href=""><p>2024年9月28日</p></a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         </main>
         <footer class="footer">
-            <div class="footer__about">
-                <p>テキスト</p>
-                <p>プロフィール詳細</p>
-                <p>お仕事の依頼</p>
-                <p>お問い合わせ</p>
+            <div class="footer__container">
+                <section class="about">
+                    <h2>About</h2>
+                    <p>HTML・CSS練習のためのサイトです。早くフロントエンド書けるようになりたい！</p>
+                    <ul class="about__ul">
+                        <li class="about__li"><a href="">プロフィール詳細</a></li>
+                        <li class="about__li"><a href="">仕事の依頼</a></li>
+                        <li class="about__li"><a href="">お問い合わせ</a></li>
+                    </ul>
+                </section>
+                <section class="menue">
+                    <h2>Menue</h2>
+                    <ul class="menue__ul">
+                        <li class="menue__li">
+                            <a class="menue__a" href=""><p>NEW</p></a>
+                        </li>
+                        <li class="menue__li">
+                            <a class="menue__a" href=""><p>CATEGORY</p></a>
+                        </li>
+                        <li class="menue__li">
+                            <a class="menue__a" href=""><p>SERIES</p></a>
+                        </li>
+                        <li class="menue__li">
+                            <a class="menue__a" href=""><p>Q&A</p></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="twitter">
+                    <h2>Twitter</h2>
+                    <a class="twitter-timeline" data-height="315" href="https://twitter.com/XDevelopers?ref_src=twsrc%5Etfw">Tweets by XDevelopers</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
             </div>
-            <ul class="footer__menue">
-                <li>
-                    <a href="">NEW</a>
-                </li>
-            </ul>
-            <div class="footer__twitter">
-                <p>twitter</p>
-            </div>
+            <p class="footer__author">🄫HTML・CSS練習</p>
         </footer>
     </div>
 </body>
