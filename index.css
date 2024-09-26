@@ -4,6 +4,7 @@ html {
 
 body {
     font-size: 1.5rem;
+    margin: 0px;
 }
 
 ul {
@@ -50,10 +51,14 @@ h3 {
 
 .header {
     width: 100%;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 10;
 }
 
 .header__h1 {
-    margin-left: 100px;
+    margin-left: 5%;
 }
 
 .header__img {
@@ -64,24 +69,26 @@ h3 {
 
 .navigation {
     display: flex;
+    /* 以下のようにcenterにすると、画面領域が小さくなった時に左側に隠れた要素が横スクロールでも表示できなくなる */
+    /* justify-content: center; */
     align-items: center;
     background-color: rgb(0, 139, 139);
-    height: 50px;
     width: 100%;
+    height: 50px;
     /* ちょっとおしゃれになる */
     box-shadow: 0px 3px 7px rgb(4, 199, 150);
 }
 
 .navigation__ul {
     display: flex;
-    justify-content: center;
-    column-gap: 16px;
     width: 100%;
+    column-gap: 30px;
+    padding-left: 5%;
 }
 
 .navigation__li {
-    width: 100%;
-    text-align: center;
+    /* 右端がギリギリなので余白を持たせている */
+    padding-right: 15px;
 }
 
 .navigation__a {
@@ -99,6 +106,11 @@ h3 {
     row-gap: 16px;
     /* %にすれば表示領域によって要素も動く。固定したい時もあると思うからケースバイケース */
     width: 100%;
+    /* 
+     * headerでposition:fixed;を指定しているので標準フローが崩れている、
+     * よって要素がheader領域に入り込まないようにしている 
+     */
+    margin-top: 140px;
 }
 
 .pickup {
@@ -109,9 +121,10 @@ h3 {
     text-align: center;
 }
 
+/* 画像はpxで指定するとレスポンシブにできないので注意 */
 .pickup__img {
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 90%;
     object-fit: cover;
 }
 
@@ -126,23 +139,28 @@ h3 {
     flex-direction: column;
     align-items: center;
     row-gap: 24px;
-    width: 70%;
-    padding: 16px;
+    width: 70%; 
 }
 
-.main__contents__articles--created-at {
-    display: inline;
-    margin-right: 8px;
-    font-size: 1.4rem;
+.article {
+    width: 90%;
 }
 
-.main__contents__articles--category {
-    display: inline;
+.article__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 8px;
+}
+
+.main__article__ul {
+    display: flex;
+    column-gap: 16px;
     font-size: 1.4rem;
 }
 
 .main__contents__articles--image {
-    height: 500px;
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
@@ -153,15 +171,13 @@ h3 {
     align-items: center;
 }
 
-
-.main__contents--aside {
+.aside {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
     width: 30%;
-    margin-top: 16px;
-    padding: 16px;
+    margin-right: 16px;
     background-color: rgba(0, 0, 0, 0.064);
 }
 
@@ -171,13 +187,19 @@ h3 {
     align-items: center;
     row-gap: 16px;
     width: 100%;
+    text-align: center;
+    margin-top: 32px;
 }
 
 .profile__img {
-    height: 150px;
-    width: 150px;
+    height: atuo;
+    width: 70%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.profile__p {
+    padding: 0 16px;
 }
 
 .ranking {
@@ -191,7 +213,7 @@ h3 {
 
 .ranking__img {
     height: 200px;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
 }
 
@@ -210,7 +232,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid rgb(0, 139, 139);
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .archive__li {
@@ -236,7 +259,6 @@ h3 {
 .about {
     margin: 0 auto;
     width: 30%;
-    height: 220px;
 }
 
 .about__ul {
@@ -245,20 +267,20 @@ h3 {
 
 .about__li {
     position: relative; /** li要素を基準に位置操作を行う */
-    padding: 0 8px;
+    /* ▶を配置するために余白を作る。親要素の横方向のpaddingなのでレスポンシブにも対応できる */
+    padding: 0 20px;
 }
 
 .about__li::before {
     content: '▶'; /* 記号を表示 */
     position: absolute; /* li を基準に絶対位置で配置 */
-    left: -10px; /* li の左側に余白をとる */
+    left: 0; /* li の左側に配置 */
     color: black; /* 記号の色 */
 }
 
 .menue {
     margin: 0 auto;
     width: 30%;
-    height: 220px;
 }
 
 .menue__ul {
@@ -279,10 +301,50 @@ h3 {
 .twitter {
     margin: 0 auto;
     width: 30%;
-    height: 220px;
 }
 
 .footer__author {
     text-align: center;
     font-size: 1.3rem;
+}
+
+/* タブレットの中でも最小の表示領域に合わせてスタイルを変える */
+@media (max-width: 768px) {
+    .navigation {   
+        overflow-x: scroll;
+    }
+    .pickup {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+    .main__contents {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .main_articles {
+        flex-direction: column;
+        width: 100%;
+    }
+    .aside {
+        width: 100%;
+        background-color: white ;
+    }
+    .profile__img {
+        width: 50%;
+    }
+    .footer__container {
+        flex-direction: column;
+        row-gap: 16px;
+        height: auto;
+    }
+    .about {
+        width: 90%;
+    }
+    .menue {
+        width: 90%;
+    }
+    .twitter {
+        width: 90%;
+    }
 }

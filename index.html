@@ -52,43 +52,55 @@
             </div>
             <div class="main__contents">
                 <div class="main_articles">
-                    <article>
-                        <h3>記事タイトル</h3>
-                        <!-- ここは階層が深くなってもdisplayで管理した方が良いかな？？ -->
-                        <p class="main__contents__articles--created-at">2024/09/18</p>
-                        <p class="main__contents__articles--category">カテゴリ1</p>
-                        <img class="main__contents__articles--image" src="./img/main1.jpg" alt="記事画像">
+                    <article class="article">
+                        <div class="article__container">
+                            <h3 class="main__articles__h3">記事タイトル</h3>
+                            <!-- 同じような記事に対する情報なのでulとliで並べる -->
+                            <ul class="main__article__ul">
+                                <li>2024/09/18</li>
+                                <li>カテゴリ1</li>
+                            </ul>
+                            <img class="main__contents__articles--image" src="./img/main1.jpg" alt="記事画像">
+                        </div>
                         <div class="articles__description">
                             <p>テキストtetetetetetetetetetetetetetetete</p>
                             <a class="article__a" href="">READ MORE</a>
                         </div>
                     </article>
-                    <article>
-                        <h3>記事タイトル</h3>
-                        <p class="main__contents__articles--created-at">2024/09/18</p>
-                        <p class="main__contents__articles--category">カテゴリ1</p>
-                        <img class="main__contents__articles--image" src="./img/main2.jpg" alt="記事画像">
+                    <article class="article">
+                        <div class="article__container">
+                            <h3 class="main__articles__h3">記事タイトルタイトルタイトル </h3>
+                            <ul class="main__article__ul">
+                                <li>2024/09/18</li>
+                                <li>カテゴリ1</li>
+                            </ul>
+                            <img class="main__contents__articles--image" src="./img/main2.jpg" alt="記事画像">
+                        </div>
                         <div class="articles__description">
                             <p>テキスト</p>
                             <a class="article__a" href="">READ MORE</a>
                         </div>
                     </article>
-                    <article>
-                        <h3>記事タイトル</h3>
-                        <p class="main__contents__articles--created-at">2024/09/18</p>
-                        <p class="main__contents__articles--category">カテゴリ1</p>
-                        <img class="main__contents__articles--image" src="./img/main3.jpg" alt="記事画像">
+                    <article class="article">
+                        <div class="article__container">
+                            <h3 class="main__articles__h3">記事タイトル</h3>
+                            <ul class="main__article__ul">
+                                <li>2024/09/18</li>
+                                <li>カテゴリ1</li>
+                            </ul>
+                            <img class="main__contents__articles--image" src="./img/main3.jpg" alt="記事画像">
+                        </div>
                         <div class="articles__description">
                             <p>テキスト</p>
                             <a class="article__a" href="">READ MORE</a>
                         </div>
                     </article>
                 </div>
-                <div class="main__contents--aside">
+                <aside class="aside">
                     <section class="profile">
                         <img  class="profile__img" src="./img/author.jpg" alt="プロフィール画像">
                         <h3>test</h3>
-                        <p>HTML・CSS練習中です。一旦はこれぐらいのサイトは1日程度で実装できるぐらいを目指しています。その後はアニメーションやデザインに力を入れたいです</p>
+                        <p class="profile__p">HTML・CSS練習中です。一旦はこれぐらいのサイトは1日程度で実装できるぐらいを目指しています。その後はアニメーションやデザインに力を入れたいです</p>
                     </section>
                     <section class="ranking">
                         <h2>Ranking</h2>
@@ -126,7 +138,7 @@
                             </li>
                         </ul>
                     </section>
-                </div>
+                </aside>
             </div>
         </main>
         <footer class="footer">
