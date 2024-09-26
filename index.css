@@ -58,7 +58,7 @@ h3 {
 }
 
 .header__h1 {
-    margin-left: 5%;
+    margin-left: 32px;
 }
 
 .header__img {
@@ -83,7 +83,7 @@ h3 {
     display: flex;
     width: 100%;
     column-gap: 30px;
-    padding-left: 5%;
+    margin-left: 32px;
 }
 
 .navigation__li {
